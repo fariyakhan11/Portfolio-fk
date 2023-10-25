@@ -1,0 +1,119 @@
+.Skills {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12rem;
+}
+
+.awesomeS {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    gap: 10px;
+}
+
+.awesomeS> :nth-child(1) {
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.awesomeS> :nth-child(2) {
+    color: var(--orange);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.awesomeS> :nth-child(3) {
+    color: var(--gray);
+    font-size: 0.8rem;
+    width: 420px;
+}
+
+.sk-blur1 {
+    top: -1rem;
+    left: 38rem;
+    filter: blur(100px);
+}
+
+.sk-blur2 {
+    left: 14rem;
+    top: 15rem;
+    filter: blur(100px);
+}
+
+.skillcontainer {
+    column-count: 2;
+    column-gap: 25px;
+    margin-top: 5rem;
+}
+
+.sbtn {
+
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.sbtn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(214, 160, 237, 0.5);
+    padding: 5px;
+}
+
+.sbtnimg {
+    width: 60px;
+    height: 60px;
+}
+
+.sbtn-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transform: translateX(-50%);
+    transition: transform 0.5s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+}
+
+.sbtn:hover .sbtn-name {
+    opacity: 1;
+    transform: translateX(10%);
+}
+
+.sbtn-container:hover .sbtnimg {
+    transform: rotate(360deg);
+    transition: transform 0.9s ease-in-out;
+}
+
+@media screen and (max-width: 480px) {
+    .Skills {
+        margin-top: 13rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .awesomeS> :nth-child(3) {
+        width: 300px;
+    }
+
+    .skillcontainer {
+        margin-top: 10px;
+        column-count: 1;
+    }
+
+    .sbtn {
+        margin-bottom: -15px;
+    }
+
+    .sbtn-container {
+        transform: scale(0.7);
+    }
+}

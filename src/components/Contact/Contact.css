@@ -1,7 +1,7 @@
 .contact-form{
     padding: 0 3rem 0 3rem;
     display: flex;
-    height: 80vh;
+    /* height: 80vh; */
     margin-top: 4rem;
       /* scroll */
   padding-top: 3rem;
@@ -20,7 +20,6 @@
     flex-direction: column;
     gap: 2rem;
     align-items: center;
-    
 }
 
 .c-right .user{
@@ -32,15 +31,45 @@
     border-radius: 8px;
     font-size: 16px;   
 }
-
 textarea{
     height: 4rem!important;
 }
-
 .c-blur1{
     top: 1rem;
     left: 8rem;
 }
+
+/* ---------fffoooter---------- */
+
+.contentcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .f-content {
+    position: absolute;
+    margin-top: 270px;
+  }
+  .gmail{
+    color: white;
+  }
+  .f-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    gap:1rem
+  }
+  .f-icons a {
+    transition: all 0.3s ease-in-out; /* Add transition effects to all CSS properties */
+  }
+  
+  .f-icons a:hover {
+    transform: scale(1.1); /* Increase the size of the icon on hover */
+    opacity: 0.8; /* Reduce the opacity of the icon on hover */
+  }
+
+  
 
 @media screen and (max-width: 480px) {
     .contact-form{
@@ -52,5 +81,12 @@ textarea{
     .c-right .user{
         width: 16rem;
     }
+    .f-content{
+        margin-top: 18rem;
+    
+      }
+      .f-icons {
+        transform: scale(0.8);
+      }
 
 }   

@@ -1,37 +1,56 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect} from "react";
+import { themeContext } from "../../Context";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import "./Intro.css";
-import Vector1 from "../../img/Vector1.png";
-import Vector2 from "../../img/Vector2.png";
-import boy from "../../img/boy.png";
-import glassesimoji from "../../img/glassesimoji.png";
-import thumbup from "../../img/thumbup.png";
-import crown from "../../img/crown.png";
-import FloatinDiv from "../FloatingDiv/FloatingDiv";
+import girl from "../../img/girl.png";
 import Github from "../../img/github.png";
 import LinkedIn from "../../img/linkedin.png";
-import Instagram from "../../img/instagram.png";
-import { themeContext } from "../../Context";
-import { motion } from "framer-motion";
 import { Link } from "react-scroll";
-const Intro = () => {
-  // Transition
-  const transition = { duration: 2, type: "spring" };
 
-  // context
+
+const Intro = () => {
+  // theme
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
 
+  // animation
+  const control = useAnimation()
+  const [ref, inView] = useInView()
+  const transition = { duration: 2, type: "spring" };
+
+  const boxVariant = 
+  {
+    hidden: { x: -100 },
+    visible: { x: 0 },
+  }
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    }
+    else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
+
   return (
-    <div className="Intro" id="Intro">
-      {/* left name side */}
+    <motion.div className="Intro" id="Intro"
+      ref={ref}
+      variants={boxVariant}
+      initial="hidden"
+      animate={control}
+      transition={transition}>
       <div className="i-left">
         <div className="i-name">
-          {/* yahan change hy darkmode ka */}
           <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
-          <span>Andrew Thomas</span>
-          <span>
-            Frontend Developer with high level of experience in web designing
-            and development, producting the Quality work
+          <span>Fariya Khan</span>
+          <span style={{ color: darkMode ? "white" : "" }}>
+            An experienced front-end developer with a passion for web design and development.
+            <br />I specialize in producing high-quality work that meets the unique needs of my clients. With a deep understanding of the latest trends and technologies in web development,
+            <br /> I'm committed to delivering exceptional results that exceed expectations. Thank you for visiting my profile.
+            <br /><br />Let's connect and discuss how I can help you achieve your web development goals.
           </span>
         </div>
         <Link to="contact" smooth={true} spy={true}>
@@ -39,58 +58,29 @@ const Intro = () => {
         </Link>
         {/* social icons */}
         <div className="i-icons">
-          <img src={Github} alt="" />
-          <img src={LinkedIn} alt="" />
-          <img src={Instagram} alt="" />
+          <a href="https://www.linkedin.com/in/fariya-khan-0557a921b/"><img src={LinkedIn} alt="linkedin" /></a>
+          <a href="https://github.com/fariyakhan11" ><img src={Github} alt="github" /></a>
         </div>
       </div>
       {/* right image side */}
       <div className="i-right">
-        <img src={Vector1} alt="" />
-        <img src={Vector2} alt="" />
-        <img src={boy} alt="" />
-        {/* animation */}
-        <motion.img
-          initial={{ left: "-36%" }}
-          whileInView={{ left: "-24%" }}
-          transition={transition}
-          src={glassesimoji}
-          alt=""
-        />
-
-        <motion.div
-          initial={{ top: "-4%", left: "74%" }}
-          whileInView={{ left: "68%" }}
-          transition={transition}
-          className="floating-div"
-        >
-          <FloatinDiv img={crown} text1="Web" text2="Developer" />
-        </motion.div>
-
-        {/* animation */}
-        <motion.div
-          initial={{ left: "9rem", top: "18rem" }}
-          whileInView={{ left: "0rem" }}
-          transition={transition}
-          className="floating-div"
-        >
-          {/* floatinDiv mein change hy dark mode ka */}
-          <FloatinDiv img={thumbup} text1="Best Design" text2="Award" />
-        </motion.div>
-
-        <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
-        <div
-          className="blur"
-          style={{
-            background: "#C1F5FF",
-            top: "17rem",
-            width: "21rem",
-            height: "11rem",
-            left: "-9rem",
-          }}
-        ></div>
+        <div className="circle">
+          <img className="myimg" src={girl} alt="" />
+        </div>
+        {darkMode ? (
+          <>
+            <div className="blur" style={{ display: "none" }}></div>
+            <div className="blur" style={{ display: "none" }}></div>
+          </>
+        ) : (
+          <>
+            <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
+            <div className="blur" style={{ background: "#C1F5FF", top: "10rem", width: "20rem", height: "11rem", left: "-2rem" }}></div>
+          </>
+        )}
       </div>
-    </div>
+    </motion.div>
+
   );
 };
 
