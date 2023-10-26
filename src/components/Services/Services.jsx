@@ -7,7 +7,7 @@ import web from "../../img/web.png";
 
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
-import Resume from './resume.pdf';
+import Resume from './Fariya Khan Resume.pdf';
 
 const Services = () => {
   // context
