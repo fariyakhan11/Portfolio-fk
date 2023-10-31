@@ -99,7 +99,7 @@ function Web() {
       images: [d1, d2, d3, d6, d5, d6, d7, d8, d9, d10, d11, d12, d13],
       title: 'Dakter Saab Website',
       description: '"Develop a comprehensive healthcare application that offers a doctor recommendation system based on specific criteria, online appointment booking, GPS-based path suggestions, blood bank connections, blood donation registration, and email verification for appointment authenticity. Users can also find pharmacies with price comparisons and pre-book medicines. Additionally, healthcare centers can register and connect with potential customers through the platform."',
-      code: "https://github.com/fariyakhan11/DakterSaabApp"
+      code: "https://github.com/fariyakhan11/DakterSaabWeb_Frontend"
     },
 
   ]);
