@@ -2,12 +2,14 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Intro from "./components/Intro/Intro";
 import Services from "./components/Services/Services";
-import Skills from "./components/Skills/Skills";
+// import Skills from "./components/Skills/Skills";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Experience from "./components/Experience/Experience";
 import Contact from "./components/Contact/Contact";
 import { useContext } from "react";
 import { themeContext } from "./Context";
+import SkillSlider from "./components/Skills/SkillCarousel";
+import SkillCarousel from "./components/Skills/SkillCarousel";
 
 
 function App() {
@@ -24,7 +26,7 @@ function App() {
     >
       <Navbar />
       <Intro />
-      <Skills />
+      <SkillCarousel/>
       <Services />
       <Portfolio />
       <Experience />

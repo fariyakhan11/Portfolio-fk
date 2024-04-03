@@ -15,6 +15,8 @@ import c3 from "../../img/c3.jpeg";
 import c4 from "../../img/c4.png";
 import c5 from "../../img/c5.jpg";
 import c6 from "../../img/c6.jpg";
+import c7 from "../../img/c7.jpeg";
+
 
 const Experience = () => {
   // theme
@@ -25,7 +27,7 @@ const Experience = () => {
   const [ref, inView] = useInView()
   const transition = { duration: 2, type: "spring" };
 
-  const boxVariant = 
+  const boxVariant =
   {
     hidden: { x: -100 },
     visible: { x: 0 },
@@ -41,17 +43,18 @@ const Experience = () => {
   }, [control, inView]);
 
   const clients = [
-    {img: c1},
-    {img: c2},
-    {img: c3},
-    {img: c4},
-    {img: c5},
-    {img: c6},
+    { img: c4 },
+    { img: c3 },
+    { img: c7 },
+    { img: c1 },
+    { img: c5 },
+    { img: c6 },
+    { img: c2 },
   ];
 
   return (
     <motion.div className="t-wrapper" id="testimonial"
-    ref={ref}
+      ref={ref}
       variants={boxVariant}
       initial="hidden"
       animate={control}
@@ -60,9 +63,6 @@ const Experience = () => {
       <div className="t-heading">
         <span>Certifications and </span>
         <span>Experience</span>
-      <div className="blur t-blur1" style={{ display: darkMode? "none": "block", background: "var(--purple)" }}></div>
-      <div className="blur t-blur2" style={{ display: darkMode? "none": "block", background: "skyblue" }}></div>
-
       </div>
       <Swiper
         // install Swiper modules

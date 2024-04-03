@@ -3,8 +3,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 6rem;
-  /* background-color: pink; */
 }
 /* heading */
 .portfolio span:nth-of-type(1) {
@@ -14,6 +12,15 @@
 }
 .portfolio span:nth-of-type(2) {
   color: var(--orange);
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
+
+/* responsive */
+@media screen and (max-width: 480px) {
+  .portfolio {
+    margin-top: 13rem;
+  }
+}
+
+

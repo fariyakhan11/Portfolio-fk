@@ -7,9 +7,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: rgba(255, 255, 255, 0.26);
-  border: 2px solid var(--orange);
-  box-shadow: var(--boxShadow);
+  /* background: rgba(255, 255, 255, 0.26); */
+  border: 2px solid #d886eb;
+  /* box-shadow: var(--boxShadow); */
+  box-shadow: 0 4px 8px rgba(187, 57, 219, 0.432);
   border-radius: 20px;
   padding: 20px;
   gap: 1rem;
@@ -19,20 +20,6 @@
   color: var(--gray);
   font-size: 16px;
 }
-/* .c-button {
-    background: #FFFFFF;
-    box-shadow: 0px 19px 60px rgba(0, 0, 0, 0.08);
-    border-radius: 7px;
-    border: none;
-    padding: 8px;
-    font-size: 12px;
-    color: #7731c7;
-}
-
-.c-button:hover{
-    transform: scale(1.1);
-    cursor: pointer;
-} */
 
 
 @media screen and (max-width: 480px){

@@ -38,8 +38,11 @@ import d12 from './imgs/dsp.jpg'
 import d13 from './imgs/dsd.jpg'
 
 
-const Slider = ({ images, title, description, code }) => {
+const Slider = ({ images, name, description, code }) => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   const [currentImage, setCurrentImage] = useState(0);
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -49,32 +52,16 @@ const Slider = ({ images, title, description, code }) => {
     return () => clearInterval(interval);
   }, [currentImage, images]);
 
-  const handleClick = (index) => {
-    setCurrentImage(index);
-  };
-
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
-
   return (
-    <div className="slider">
-      <img src={images[currentImage]} alt={title} />
-      <h4>{title}</h4>
-      <div className='descdiv'>
-        <p className='desc' style={{ color: darkMode ? "white" : "" }}>{description}</p>
-        <div className="smallbtndiv">
-          <a className="button" href={code} target="_blank" rel="noreferrer">Source Code</a>
-          <div className="slider-buttons">
-            {images.map((_, index) => (
-              <button key={index}
-                className={`slider-button ${currentImage === index ? 'active' : ''}`}
-                onClick={() => handleClick(index)}
-              />
-            ))}
-          </div>
-        </div>
+    <div className="slider" style={{ backgroundColor: darkMode ? "rgba(117, 79, 132, 0.5)" : "" }} >
+      <div >
+        <p className='pname'>{name}</p>
+        <img src={images[currentImage]} alt={name} />
       </div>
-
+      <div className='descdiv'>
+        <p className='desc'>{description}</p>
+        <a className="button" href={code} target="_blank" rel="noreferrer">Source Code</a>
+      </div>
     </div>
   );
 };
@@ -85,33 +72,34 @@ function Web() {
 
     {
       images: [f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14],
-      title: 'FnF house Of Guns',
+      name: 'FnF house Of Guns',
       description: '"F&F HOG is an online webapp that allows lawful purchases of legal arms and ammunition \n This modern webapp along with the latest UI design attracts customers and provides ease of  use to those surfing the website. \n  The aim of this system is to facilitate potential customers in \n buying arms seamlessly. They can view all the available arms according to categories,\n view  product description in order to help in their purchases or just gain knowledge about them"',
       code: "https://github.com/fariyakhan11/FnF-House-of-Guns-ECommerce-website"
     },
     {
       images: [p1, p2, p3, p4, p5],
-      title: 'PixBay',
+      name: 'PixBay',
       description: '"Revamp your images in seconds! With our website, apply a variety of transformations such as sketch, grayscale, mirror, contrast, and transpose effortlessly. Get creative and transform your images with just a few clicks. Try it out now and see the difference. Explore the possibilities with us."',
       code: "https://github.com/fariyakhan11/Pixbay"
     },
     {
       images: [d1, d2, d3, d6, d5, d6, d7, d8, d9, d10, d11, d12, d13],
-      title: 'Dakter Saab Website',
+      name: 'Dakter Saab Website',
       description: '"Develop a comprehensive healthcare application that offers a doctor recommendation system based on specific criteria, online appointment booking, GPS-based path suggestions, blood bank connections, blood donation registration, and email verification for appointment authenticity. Users can also find pharmacies with price comparisons and pre-book medicines. Additionally, healthcare centers can register and connect with potential customers through the platform."',
       code: "https://github.com/fariyakhan11/DakterSaabWeb_Frontend"
     },
 
   ]);
 
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
 
   return (
     <div className="slider-container">
       {sliderData.slice(sliderIndex, sliderIndex + 3).map((slider, index) => (
-        <Slider
-          key={index}
+        <Slider key={index}
           images={slider.images}
-          title={slider.title}
+          name={slider.name}
           description={slider.description}
           code={slider.code}
         />

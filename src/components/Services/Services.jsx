@@ -7,7 +7,7 @@ import web from "../../img/web.png";
 
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
-import Resume from './Fariya Khan Resume.pdf';
+import Resume from './Fariya Khan Cv.pdf';
 
 const Services = () => {
   // context
@@ -15,19 +15,19 @@ const Services = () => {
   const darkMode = theme.state.darkMode;
 
   // transition
-  const transition = {duration: 1,type: "spring"};
+  const transition = { duration: 1, type: "spring" };
 
   return (
     <div className="services" id="services">
+      {/* left side */}
       <div className="awesome">
         <span style={{ color: darkMode ? "white" : "" }}>My</span>
         <span>Services</span>
         <span style={{ color: darkMode ? "white" : "" }}>
           I offer services in UI/UX design, React.js development, and React Native app development.
-          <br />
-          I excel in creating visually appealing and user-friendly interfaces while leveraging the power of React  
-          <br />technologies to build efficient and scalable web and mobile applications.
-          <br />
+          I excel in creating visually appealing and user-friendly interfaces while leveraging the power of React
+          technologies to build efficient and scalable web applications.
+          <br /><br />
           Explore my work to see how I can enhance your digital projects.
         </span>
         <a href={Resume} download>
@@ -35,7 +35,7 @@ const Services = () => {
         </a>
         <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
       </div>
-
+      {/* right side  */}
       <div className="cards">
         {/* 1 card */}
         <motion.div
@@ -47,7 +47,7 @@ const Services = () => {
             heading={"UI/UX"}
             detail={"Figma, Adobe Xd"} />
         </motion.div>
-        
+
         {/* 2 card */}
         <motion.div
           initial={{ left: "-10rem", top: "12rem" }}
@@ -71,10 +71,6 @@ const Services = () => {
           // color="rgba(252, 166, 31, 0.45)"
           />
         </motion.div>
-        <div
-          className="blur s-blur2"
-          style={{ background: "var(--purple)" }}
-        ></div>
       </div>
     </div>
   );

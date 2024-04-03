@@ -12,10 +12,10 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio" id="portfolio">
-      <span style={{ color: darkMode ? 'white' : '' }}>Recent Projects</span>
-      <span>Websites and Apps</span>
+      <span style={{ color: darkMode ? 'white' : '' }}>Projects</span>
+      {/* <span>Websites</span> */}
       <div>
-        <Web />
+        <Web/>
         <AppWeb/>
       </div>
     </div>

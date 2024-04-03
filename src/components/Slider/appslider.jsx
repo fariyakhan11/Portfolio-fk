@@ -46,15 +46,13 @@ const AppSlider = ({ images, title, description, code }) => {
 
     return (
         <div className="app-slider">
+            <p className='pname'>{title}</p>
             <img src={images[currentImage]} alt={title} />
-            <h4>{title}</h4>
-            <p className="desc" style={{ color: darkMode ? 'white' : '' }}>
-                {description}
-            </p>
-            <a className="button" href={code} target="_blank" rel="noreferrer">
-                Source Code
-            </a>
-            <div className="slider-buttons">
+            <div className="descdiv">
+                <p className="desc" >{description}</p>
+                <a className="button" href={code} target="_blank" rel="noreferrer">Source Code</a>
+            </div>
+            {/* <div className="slider-buttons">
                 {images.map((_, index) => (
                     <button
                         key={index}
@@ -62,7 +60,7 @@ const AppSlider = ({ images, title, description, code }) => {
                         onClick={() => handleClick(index)}
                     />
                 ))}
-            </div>
+            </div> */}
         </div>
     );
 };
@@ -71,34 +69,34 @@ function AppWeb() {
     const [sliderIndex] = useState(0);
     const [sliderData] = useState([
         {
-            images: [a1,a2,a3,a5,a6,a7,a8,a9,a10,a11,a12],
+            images: [a1, a2, a3, a5, a6, a7, a8, a9, a10, a11, a12],
             title: 'Dakter Saab App',
             description: '"Grayscale, mirror, contrast, and transpose effortlessly. Get creative and transform your images with just a few clicks. Try it out now and see the difference. Explore the possibilities with us."',
             code: "https://github.com/fariyakhan11/DakterSaabApp"
-          },
-          {
-            images: [i1,i2,i3,i4,i5,i6,i7,i8],
+        },
+        {
+            images: [i1, i2, i3, i4, i5, i6, i7, i8],
             title: 'interiAR',
             description: '"Flutter App Get creative and transform your images with just a few clicks. Try it out now and see the difference. Explore the possibilities with us."',
             code: "https://github.com/fariyakhan11/interiAR_flutter_app"
-          },
+        },
     ]);
-  
+
     return (
-      <div className="app-slider-container">
-        {sliderData.slice(sliderIndex, sliderIndex + 2).map((slider, index) => (
-          <AppSlider
-            key={index}
-            images={slider.images}
-            title={slider.title}
-            description={slider.description}
-            code={slider.code}
-          />
-        ))}
-      </div>
+        <div className="app-slider-container">
+            {sliderData.slice(sliderIndex, sliderIndex + 2).map((slider, index) => (
+                <AppSlider
+                    key={index}
+                    images={slider.images}
+                    title={slider.title}
+                    description={slider.description}
+                    code={slider.code}
+                />
+            ))}
+        </div>
     );
-  }
-  
-  export default AppWeb;
-  
+}
+
+export default AppWeb;
+
 

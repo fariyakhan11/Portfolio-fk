@@ -1,4 +1,4 @@
-import React, { useContext, useEffect} from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { themeContext } from "../../Context";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -6,6 +6,9 @@ import "./Intro.css";
 import girl from "../../img/girl.png";
 import Github from "../../img/github.png";
 import LinkedIn from "../../img/linkedin.png";
+import gmail from "../../img/mail.png";
+import Resume from './Fariya Khan Cv.pdf';
+
 import { Link } from "react-scroll";
 
 
@@ -19,7 +22,7 @@ const Intro = () => {
   const [ref, inView] = useInView()
   const transition = { duration: 2, type: "spring" };
 
-  const boxVariant = 
+  const boxVariant =
   {
     hidden: { x: -100 },
     visible: { x: 0 },
@@ -34,7 +37,6 @@ const Intro = () => {
     }
   }, [control, inView]);
 
-
   return (
     <motion.div className="Intro" id="Intro"
       ref={ref}
@@ -42,31 +44,42 @@ const Intro = () => {
       initial="hidden"
       animate={control}
       transition={transition}>
+
       <div className="i-left">
         <div className="i-name">
-          <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
-          <span>Fariya Khan</span>
-          <span style={{ color: darkMode ? "white" : "" }}>
-            An experienced front-end developer with a passion for web design and development.
-            <br />I specialize in producing high-quality work that meets the unique needs of my clients. With a deep understanding of the latest trends and technologies in web development,
-            <br /> I'm committed to delivering exceptional results that exceed expectations. Thank you for visiting my profile.
-            <br /><br />Let's connect and discuss how I can help you achieve your web development goals.
-          </span>
+          <span style={{ color: darkMode ? "var(--purple)" : "" }}>Fariya Khan</span>
+          <span style={{ color: darkMode ? "white" : "" }}>Web developer</span>
+          <span> Let's connect and discuss how I can assist you in achieving your software engineering goals</span>
         </div>
-        <Link to="contact" smooth={true} spy={true}>
-          <button className="button i-button">Hire me</button>
-        </Link>
-        {/* social icons */}
         <div className="i-icons">
           <a href="https://www.linkedin.com/in/fariya-khan-0557a921b/"><img src={LinkedIn} alt="linkedin" /></a>
           <a href="https://github.com/fariyakhan11" ><img src={Github} alt="github" /></a>
+          <a href="fariyakhan644@gmail.com" ><img src={gmail} alt="Gmail" /></a>
         </div>
+
       </div>
-      {/* right image side */}
-      <div className="i-right">
-        <div className="circle">
-          <img className="myimg" src={girl} alt="" />
+      {/* right side */}
+      <div className="i-right" style={{ backgroundColor: darkMode ? "rgba(117, 79, 132, 0.5)" : "" }}>
+        <div className="tittle" style={{ color: darkMode ? "white" : "" }} >
+          <h2 style={{ color: darkMode ? "var(--purple)" : "" }}>About me </h2>
+          <p className="aboutme" style={{ color: darkMode ? "white" : "" }}>
+            Hello, I'm Fariya Khan, a passionate software engineer specializing in web development.
+            I am dedicated to delivering customized solutions that perfectly align with my clients' requirements.
+            With a strong focus on staying updated with the latest trends and technologies in the field, I strive to exceed expectations.
+          </p>
+          <div className="buttonsdiv">
+            <a href={Resume} download>
+              <button className="button d-button">Download CV</button>
+            </a>
+
+            <Link to="contact" smooth={true} spy={true}>
+              <button className="button">Contact</button>
+            </Link>
+          </div>
         </div>
+
+
+
         {darkMode ? (
           <>
             <div className="blur" style={{ display: "none" }}></div>
@@ -75,7 +88,7 @@ const Intro = () => {
         ) : (
           <>
             <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
-            <div className="blur" style={{ background: "#C1F5FF", top: "10rem", width: "20rem", height: "11rem", left: "-2rem" }}></div>
+            <div className="blur" style={{ background: "#C1F5FF", top: "10rem", width: "20rem", height: "11rem", left: "-30rem" }}></div>
           </>
         )}
       </div>
