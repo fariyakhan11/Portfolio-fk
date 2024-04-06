@@ -61,8 +61,8 @@ const Experience = () => {
       transition={transition}
     >
       <div className="t-heading">
-        <span>Certifications and </span>
-        <span>Experience</span>
+        <span>Certificates</span>
+        {/* <span>Experience</span> */}
       </div>
       <Swiper
         // install Swiper modules
@@ -73,7 +73,7 @@ const Experience = () => {
         {clients.map((client, index) => {
           return (
             <SwiperSlide key={index}>
-              <div className="testimonial">
+              <div className="testimonial"  style={{ backgroundColor: darkMode ? "rgba(117, 79, 132, 0.5)" : "" }}>
                 <img src={client.img} alt="" />
               </div>
             </SwiperSlide>

@@ -45,12 +45,12 @@ const AppSlider = ({ images, title, description, code }) => {
     const darkMode = theme.state.darkMode;
 
     return (
-        <div className="app-slider">
+        <div className="app-slider" style={{ backgroundColor: darkMode ? "rgba(117, 79, 132, 0.5)" : ""}}>
             <p className='pname'>{title}</p>
             <img src={images[currentImage]} alt={title} />
-            <div className="descdiv">
-                <p className="desc" >{description}</p>
-                <a className="button" href={code} target="_blank" rel="noreferrer">Source Code</a>
+            <div className='descdiv' style={{ backgroundColor: darkMode ? "var(--black)" : "" }}>
+                <p className='desc' style={{ color: darkMode ? "white" : "" }}>{description}</p>
+                <a className="codebtn" href={code} target="_blank" rel="noreferrer">Source Code</a>
             </div>
             {/* <div className="slider-buttons">
                 {images.map((_, index) => (

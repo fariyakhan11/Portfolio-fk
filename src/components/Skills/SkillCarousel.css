@@ -21,7 +21,7 @@
 }
 
 .awesomeS> :nth-child(2) {
-  color: var(--orange);
+  color: var(--lightpurple);
   font-size: 2.5rem;
   font-weight: bold;
 }

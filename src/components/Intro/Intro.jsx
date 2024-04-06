@@ -47,7 +47,7 @@ const Intro = () => {
 
       <div className="i-left">
         <div className="i-name">
-          <span style={{ color: darkMode ? "var(--purple)" : "" }}>Fariya Khan</span>
+          <span style={{ color: darkMode ? "var(--lightpurple)" : "" }}>Fariya Khan</span>
           <span style={{ color: darkMode ? "white" : "" }}>Web developer</span>
           <span> Let's connect and discuss how I can assist you in achieving your software engineering goals</span>
         </div>
@@ -61,7 +61,7 @@ const Intro = () => {
       {/* right side */}
       <div className="i-right" style={{ backgroundColor: darkMode ? "rgba(117, 79, 132, 0.5)" : "" }}>
         <div className="tittle" style={{ color: darkMode ? "white" : "" }} >
-          <h2 style={{ color: darkMode ? "var(--purple)" : "" }}>About me </h2>
+          <h2 style={{ color: darkMode ? "var(--lightpurple)" : "" }}>About me </h2>
           <p className="aboutme" style={{ color: darkMode ? "white" : "" }}>
             Hello, I'm Fariya Khan, a passionate software engineer specializing in web development.
             I am dedicated to delivering customized solutions that perfectly align with my clients' requirements.

@@ -1,92 +1,97 @@
-.contact-form{
-    padding: 0 3rem 0 3rem;
-    display: flex;
-    /* height: 80vh; */
-    margin-top: 4rem;
-      /* scroll */
+.contact-form {
+  padding: 0 3rem 0 3rem;
+  display: flex;
+  margin-top: 4rem;
   padding-top: 3rem;
 }
 
-.c-right{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    flex: 1;
+.c-right {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex: 1;
 }
 
-.c-right>form
-{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
+.c-right>form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
 }
 
-.c-right .user{
-    width: 20rem;
-    height: 2rem;
-    padding: 0.3em;
-    outline: none;
-    border: 2px solid var(--orange);
-    border-radius: 8px;
-    font-size: 16px;   
+.c-right .user {
+  width: 20rem;
+  height: 2rem;
+  padding: 0.3em;
+  outline: none;
+  border: 2px solid var(--orange);
+  border-radius: 8px;
+  font-size: 16px;
 }
-textarea{
-    height: 4rem!important;
+
+textarea {
+  height: 4rem !important;
 }
-.c-blur1{
-    top: 1rem;
-    left: 8rem;
+
+.c-blur1 {
+  top: 1rem;
+  left: 8rem;
 }
 
 /* ---------fffoooter---------- */
 
-.contentcontainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contentcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-  .f-content {
-    position: absolute;
-    margin-top: 270px;
-  }
-  .gmail{
-    color: white;
-  }
-  .f-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-around;
-    gap:1rem
-  }
-  .f-icons a {
-    transition: all 0.3s ease-in-out; /* Add transition effects to all CSS properties */
-  }
-  
-  .f-icons a:hover {
-    transform: scale(1.1); /* Increase the size of the icon on hover */
-    opacity: 0.8; /* Reduce the opacity of the icon on hover */
-  }
 
-  
+.f-content {
+  position: absolute;
+  margin-top: 270px;
+}
+
+.gmail {
+  color: white;
+}
+
+.f-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem
+}
+
+.f-icons a {
+  transition: all 0.3s ease-in-out;
+}
+
+.f-icons a:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+
 
 @media screen and (max-width: 480px) {
-    .contact-form{
-        padding: 0;
-        flex-direction: column;
-        gap: 5rem;
-        height: 40rem;
-    }
-    .c-right .user{
-        width: 16rem;
-    }
-    .f-content{
-        margin-top: 18rem;
-    
-      }
-      .f-icons {
-        transform: scale(0.8);
-      }
+  .contact-form {
+    padding: 0;
+    flex-direction: column;
+    gap: 5rem;
+    height: 40rem;
+  }
+  .c-right .user {
+    width: 16rem;
+  }
+  .f-content {
+    margin-top: 18rem;
+  }
+  .f-icons {
+    transform: scale(0.8);
+  }
+  .c-right .c-blur1{
+    display: none;
+}
 
-}   
+}

@@ -39,8 +39,10 @@ import d13 from './imgs/dsd.jpg'
 
 
 const Slider = ({ images, name, description, code }) => {
+  // theme
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+
   const [currentImage, setCurrentImage] = useState(0);
 
 
@@ -58,9 +60,9 @@ const Slider = ({ images, name, description, code }) => {
         <p className='pname'>{name}</p>
         <img src={images[currentImage]} alt={name} />
       </div>
-      <div className='descdiv'>
-        <p className='desc'>{description}</p>
-        <a className="button" href={code} target="_blank" rel="noreferrer">Source Code</a>
+      <div className='descdiv' style={{ backgroundColor: darkMode ? "var(--black)" : "" }}>
+        <p className='desc' style={{ color: darkMode ? "white" : "" }}>{description}</p>
+        <a className="codebtn" href={code} target="_blank" rel="noreferrer">Source Code</a>
       </div>
     </div>
   );
@@ -97,7 +99,8 @@ function Web() {
   return (
     <div className="slider-container">
       {sliderData.slice(sliderIndex, sliderIndex + 3).map((slider, index) => (
-        <Slider key={index}
+        <Slider
+          key={index}
           images={slider.images}
           name={slider.name}
           description={slider.description}

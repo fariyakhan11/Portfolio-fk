@@ -1,6 +1,5 @@
 .Intro {
   display: flex;
-  /* height: 63vh; */
   margin-top: 4rem;
 }
 
@@ -19,8 +18,7 @@
 
 }
 .i-name > :nth-child(1) {
-  color: var(--orange);
-  /* font-weight: bold; */
+  color: var(--lightpurple);
   font-size: 3rem;
 }
 .i-name > :nth-child(2) {
@@ -31,8 +29,8 @@
 }
 
 .i-name > :nth-child(3) {
-  font-size: 1rem;
-  color: var(--gray);
+  font-size: 0.75rem;
+  color: white;
 }
 
 .i-icons {
@@ -68,7 +66,7 @@
   color: var(--black);
 }
 .aboutme{
-  font-size: 1rem;
+  font-size: 0.85rem;
   color: var(--black);
   text-align: justify;
 
@@ -76,7 +74,6 @@
 .buttonsdiv{
   display: flex;
   align-items: center;
-  /* justify-content: center; */
 }
 
 .d-button{
@@ -102,7 +99,6 @@
   .Intro {
     margin-top: 2rem;
     flex-direction: column;
-    /* height: 40rem; */
   }
 
   .i-right .blur {

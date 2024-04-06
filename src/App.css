@@ -1,6 +1,6 @@
 :root {
-  --orange: #b97fe5;       /*name*/
-  --black: #242D49;
+  --lightpurple: #c98ff5;
+  --black: #000000;
   --gray: #53555b;
   --blueCard: #DDF8FE;
   --purple: rgb(238 210 255);
@@ -31,7 +31,7 @@
 .button:hover {
   background: white;
   cursor: pointer;
-  color: var(--orange);
+  color: var(--lightpurple);
 }
 
 @media screen and (max-width: 480px) {

@@ -1,5 +1,5 @@
 .t-wrapper{
-    padding:  0 3rem 0 3rem;
+    /* padding:  0 3rem 0 3rem; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,8 +27,9 @@
     padding: 1rem;
     height: 350px;
     background: rgba(255, 255, 255, 0.26);
-    border: 2px solid var(--blueCard);
-    border-radius: 15px;
+    border: 2px solid #d886eb;
+    /* box-shadow: 0 4px 8px rgba(187, 57, 219, 0.432); */
+    border-radius: 10px;
 }
 .testimonial img{
     width: 500px;
@@ -50,9 +51,11 @@
     align-items: center;
     justify-content: center;
 }
-
+.t-wrapper .swiper-pagination-bullet{
+    background: var(--lightpurple);
+}
 .t-wrapper .swiper-pagination-bullet-active{
-    background: var(--orange);
+    background: var(--lightpurple);
 }
 
 @media screen and (max-width: 480px){

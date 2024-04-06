@@ -36,9 +36,10 @@ const Services = () => {
         <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
       </div>
       {/* right side  */}
-      <div className="cards">
+      <div className="carddiv">
         {/* 1 card */}
-        <motion.div
+        
+        <motion.div  className="cardcontainer"
           initial={{ left: "18rem" }}
           whileInView={{ left: "12rem" }}
           transition={transition}>
@@ -49,7 +50,7 @@ const Services = () => {
         </motion.div>
 
         {/* 2 card */}
-        <motion.div
+        <motion.div className="cardcontainer"
           initial={{ left: "-10rem", top: "12rem" }}
           whileInView={{ left: "-4rem" }}
           transition={transition}>
@@ -60,7 +61,7 @@ const Services = () => {
         </motion.div>
 
         {/* 3 card */}
-        <motion.div
+        <motion.div className="cardcontainer"
           initial={{ top: "19rem", left: "25rem" }}
           whileInView={{ left: "12rem" }}
           transition={transition}>
@@ -68,7 +69,6 @@ const Services = () => {
             emoji={mob}
             heading={"Mobile Application"}
             detail={"React Native, Nodejs, MongoDB"}
-          // color="rgba(252, 166, 31, 0.45)"
           />
         </motion.div>
       </div>
