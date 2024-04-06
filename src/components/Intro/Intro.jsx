@@ -49,7 +49,7 @@ const Intro = () => {
         <div className="i-name">
           <span style={{ color: darkMode ? "var(--lightpurple)" : "" }}>Fariya Khan</span>
           <span style={{ color: darkMode ? "white" : "" }}>Web developer</span>
-          <span> Let's connect and discuss how I can assist you in achieving your software engineering goals</span>
+          <span style={{ color: darkMode ? "white" : "" }}>Let's connect and discuss how I can assist you in achieving your software engineering goals</span>
         </div>
         <div className="i-icons">
           <a href="https://www.linkedin.com/in/fariya-khan-0557a921b/"><img src={LinkedIn} alt="linkedin" /></a>
