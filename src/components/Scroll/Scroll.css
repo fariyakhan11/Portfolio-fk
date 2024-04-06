@@ -1,0 +1,30 @@
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    /* padding: 5px; */
+    background-color: var(--lightpurple);
+    color: white;
+    border: none;
+    border-radius: 50%; 
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease; 
+    z-index: 10;
+  }
+  
+  .scroll-to-top-btn.show {
+    display: block;
+  }
+  
+  .scroll-to-top-btn:hover {
+    opacity: 0.8; /* Reduce opacity on hover */
+  }
+  
+  .scroll-to-top-btn::before {
+    content: '\2191'; /* Unicode character for the arrow pointing up */
+  font-size: 22px;
+  }
+  

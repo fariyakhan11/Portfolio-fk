@@ -54,7 +54,7 @@ const Intro = () => {
         <div className="i-icons">
           <a href="https://www.linkedin.com/in/fariya-khan-0557a921b/"><img src={LinkedIn} alt="linkedin" /></a>
           <a href="https://github.com/fariyakhan11" ><img src={Github} alt="github" /></a>
-          <a href="fariyakhan644@gmail.com" ><img src={gmail} alt="Gmail" /></a>
+          <a href="https://mail.google.com" ><img src={gmail} alt="Gmail" /></a>
         </div>
 
       </div>
@@ -63,9 +63,10 @@ const Intro = () => {
         <div className="tittle" style={{ color: darkMode ? "white" : "" }} >
           <h2 style={{ color: darkMode ? "var(--lightpurple)" : "" }}>About me </h2>
           <p className="aboutme" style={{ color: darkMode ? "white" : "" }}>
-            Hello, I'm Fariya Khan, a passionate software engineer specializing in web development.
-            I am dedicated to delivering customized solutions that perfectly align with my clients' requirements.
-            With a strong focus on staying updated with the latest trends and technologies in the field, I strive to exceed expectations.
+          I'm Fariya Khan, a passionate software engineer with a focus on web development. 
+          I have hands-on experience with HTML/CSS, JavaScript, React, React Native. I'm dedicated to delivering solutions and staying updated with the latest technologies.
+          I'm eager to learn and explore advanced frameworks and tools to enhance my skills and create exceptional digital experiences. 
+          I'm also excited to excel my skills further by diving into the MERN stack (MongoDB, Express.js, React, Node.js) and building full-stack applications.
           </p>
           <div className="buttonsdiv">
             <a href={Resume} download>
